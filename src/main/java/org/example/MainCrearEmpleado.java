@@ -14,11 +14,12 @@ public class MainCrearEmpleado {
             System.out.println("Conectado!");
 
             Statement statement = connection.createStatement();
-
+            // Creo una sql para crear la tabla EMPLEADO
             String sql = "CREATE TABLE empleado (" +
                     "id NUMBER PRIMARY KEY, " +
                     "nombre VARCHAR2(100), " +
                     "salario NUMBER(10, 2))";
+            // Ejecutamos un executeUpdate para crear la tabla
             statement.executeUpdate(sql);
             System.out.println("TABLA EMPLEADO CREADO");
         } catch (SQLException e) {
